@@ -1,0 +1,49 @@
+@media (max-width: 1650px){
+    .pokedex-header .container {
+        grid-template-columns: 100%;
+        justify-items: center;       
+    }
+
+    .poke-search {
+        display: grid;
+        justify-items: center;
+    }
+
+    input:focus + .labelline, input:valid + .labelline {
+        transform: translate(0, -23px) scale(0.80);
+        z-index: 1;
+    }
+}
+
+@media (max-width: 550px) {
+    .poke-search input {
+        width: 75%;
+    }
+
+    .pokemon {
+        width: 75px;
+        height: 75px;
+        padding: 5px;
+        border-radius: 50%;
+    }
+
+    .poke-header .pokeball, .poke-header .poke-number{
+        display: none;
+    }
+
+    .poke-header .poke-name {
+        justify-content: center;
+        font-size: 9px;
+    }
+
+    .pokemon .poke-info a .poke-img {
+        width: 75px;
+        margin: -5px auto;
+    }
+
+    .pokemon .poke-info .poke-types {
+        display: none;
+    }
+
+
+}

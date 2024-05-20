@@ -1,0 +1,313 @@
+/*------------------------------------------------------------------------------VARIABLES------------------------------------------------------------------------------*/
+:root {
+    /*------------------------------------------------------------------------------Classes------------------------------------------------------------------------------*/
+    --grass:	#9bcc50;
+    --poison: #b97fc9;
+    --fire: #fd7d24;
+    --flying: #3dc7ef;
+    --water:	#4592c4;
+    --bug: #729f3f;
+    --normal: #a4acaf;
+    --electric: #eed535;
+    --ground: #ab9842;
+    --fairy: #fdb9e9;
+    --fighting: #d56723;
+    --psychic: #f366b9;
+    --rock: #a38c21;
+    --steel: #9eb7b8;
+    --ghost: #7b62a3;
+    --ice: #51c4e7;
+    --dragon: #f16e57;
+
+    /*------------------------------------------------------------------------------Background------------------------------------------------------------------------------*/
+    --darkbg: url(../img/darkbg.png);
+    --litebg: url(../img/litebg.png);
+    /*------------------------------------------------------------------------------Hamburguer------------------------------------------------------------------------------*/
+    
+}
+
+
+
+/*------------------------------------------------------------------------------General Rules------------------------------------------------------------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Generica;
+    src: url(../fonts/Generica.otf);
+}
+
+@font-face {
+    font-family: KodeMonoB;
+    src: url(../fonts/KodeMono-Bold.ttf);
+}
+
+@font-face {
+    font-family: KodeMono;
+    src: url(../fonts/KodeMono-Regular.ttf);
+}
+
+body {
+    background-image: var(--darkbg);
+    color: #fff;
+}
+
+/*------------------------------------------------------------------------------Header------------------------------------------------------------------------------*/
+header {
+    margin: auto;
+    max-width: 1920px;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+}
+
+.tittle {
+    width: 300px;
+    margin-bottom: -55px;
+}
+
+/*------------------------------------------------------------------------------Pokedex Header------------------------------------------------------------------------------*/
+.pokedex-header {
+    background-color: rgba(12, 12, 12, 0.7);
+    padding: 20px 20px;
+}
+
+.pokedex-header .container {
+   max-width: 1625px;
+   display: grid;
+   grid-template-columns: 25% 75%;
+   margin: auto;
+}
+
+.poke-search {
+    width: 50%;
+    margin: 25px;
+    padding: 25px;
+}
+
+input {
+    position: absolute;
+    padding: 10px;
+    margin-top: -23px;
+    width: 400px;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid #FCCF00;
+    font-size: 22px;
+    font-family: Generica;
+    letter-spacing: 2px;
+    background-color: transparent;
+    transition: 0.1s ease;
+    z-index: 1;
+}
+
+input:focus, input:valid {
+    color: #FCCF00;
+    border: 3px solid #2468B1;
+}
+
+input:focus + .labelline, input:valid + .labelline {
+    transform: translate(-15px, -23px) scale(0.80);
+    z-index: 1;
+}
+
+.pokedex-header .container .poke-search .labelline {
+    position: absolute;
+    margin: -10px 15px;
+    padding: 0px 10px;
+    font-family: KodeMonoB;
+    transition: 0.2s ease;
+    color: #FCCF00;
+    background-color: rgba(12, 12, 12, 0.7);
+}
+
+.pokedex-header .container .poke-filter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+
+.types-img {
+    width: 45px;
+    margin: 10px 5px;
+    padding: 5px;
+    transition: 0.5s ease;
+}
+
+.types-img:hover {
+    scale: 1.2;
+    cursor: pointer;
+}
+
+.types-img.active {
+    transform: scale(1.5);
+  }
+
+
+
+/*------------------------------------------------------------------------------Pokemon------------------------------------------------------------------------------*/
+.pokedex {
+    margin: auto;
+    max-width: 1920px;
+}
+
+.pokedex .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pokemon {
+    margin: 25px 12.5px 0px 12.5px;
+    padding: 15px 50px;
+    border-radius: 25px;
+    background-color: rgba(12, 12, 12, 0.7);
+    width: 250px;
+    height: 325px;
+}
+
+/*------------------------------------------------------------------------------Pokemon Header------------------------------------------------------------------------------*/
+.pokemon .poke-header .pokeball {
+    width: 13px;
+    height: 13px;
+}
+
+.pokemon .poke-header .poke-number {
+    font-family: KodeMono;
+}
+
+.pokemon .poke-header h2 {
+    font-family: Generica;
+    letter-spacing: 2px;
+}
+
+/*------------------------------------------------------------------------------Pokemon Information------------------------------------------------------------------------------*/
+.pokemon .poke-info a {
+    display: flex;
+    justify-content: center;   
+}
+
+.pokemon .poke-info a .poke-img {
+    width: 200px;
+    margin: 10px auto;
+    transition: 0.5s ease;
+}
+
+.pokemon .poke-info a .poke-img:hover {
+    scale: 1.4;
+}
+
+.pokemon .poke-info .poke-types {
+    display: flex;
+    justify-content: center;
+}
+
+/*------------------------------------------------------------------------------Pokemon Types------------------------------------------------------------------------------*/
+.types {
+    display: inline-block;
+    min-width: 85px;
+    max-width: 85px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 15px;
+    text-align: center;
+    color: #000;
+    font-family: KodeMono;
+    font-size: 14px;
+}
+
+.grass {
+    background-color: var(--grass);
+}
+
+.poison{
+    background-color: var(--poison);
+}
+
+.fire{
+    background-color: var(--fire);
+}
+
+.flying{
+    background-color: var(--flying);
+}
+
+.water{
+    background-color: var(--water);
+}
+
+.bug{
+    background-color: var(--bug);
+}
+
+.normal{
+    background-color: var(--normal);
+}
+
+.electric{
+    background-color: var(--electric);
+}
+
+.ground{
+    background-color: var(--ground);
+}
+
+.fairy{
+    background-color: var(--fairy);
+}
+
+.fighting{
+    background-color: var(--fighting);
+}
+
+.psychic{
+    background-color: var(--psychic);
+}
+
+.rock{
+    background-color: var(--rock);
+}
+
+.steel{
+    background-color: var(--steel);
+}
+
+.ghost{
+    background-color: var(--ghost);
+}
+
+.ice{
+    background-color: var(--ice);
+}
+
+.dragon{
+    background-color: var(--dragon);
+}
+
+/*
+ type-grass
+ type-poison
+ type-fire
+ type-flying
+ type-water
+ type-bug
+ type-normal
+ type-electric
+ type-ground
+ type-fairy
+ type-fighting
+ type-psychic
+ type-rock
+ type-steel
+ type-ghost
+ type-ice
+ type-dragon
+
+*/
